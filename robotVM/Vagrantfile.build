@@ -1,12 +1,5 @@
 #Vagrantfile for building machine from build scripts
 
-#Set the environment variable from the command line used to call vagrant for:
-# - password for authenticated services (default is: tm351)
-#export TMP_PASS="123"
-
-##For web host provisioning:
-### --provider=digital ocean: export DIGITAL_OCEAN_TOKEN="YOUR TOKEN HERE"
-##--provider=linode: export LINODE_API_KEY="YOUR KEY HERE"
 
 Vagrant.configure("2") do |config|
 	
@@ -37,8 +30,11 @@ config.vm.provider :virtualbox do |virtualbox|
 	#After the build it can be reduced back down to 1024
 	virtualbox.memory = 1024
 	#virtualbox.cpus = 1 
-	virtualbox.gui = true
+	#virtualbox.gui = true
 
+	#Copy and paste
+	virtualbox.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+	
 	#---- START PORT FORWARDING ----
 	#Just in case we want to expose the simulator port(s)?
 	#Jupyter notebook
