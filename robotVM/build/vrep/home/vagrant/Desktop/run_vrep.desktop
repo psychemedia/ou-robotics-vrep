@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=V-REP Simulator
+Comment=Run V-REP Simulator
+Exec=/opt/V-REP_PRO_EDU_V3_4_0_Linux/vrep.sh
+Icon=
+Terminal=false
+Type=Application

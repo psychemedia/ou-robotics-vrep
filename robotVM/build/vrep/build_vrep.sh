@@ -5,9 +5,11 @@ THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #systemctl list-units | grep vrep
 #journalctl -u vrep.service
 
+VREPDIST="V-REP_PRO_EDU_V3_4_0_Linux"
+VREPPATH="/opt/$VREPDIST"
 
-VREPGZ="V-REP_PRO_EDU_V3_4_0_Linux.tar.gz"
-VREPSRC="http://coppeliarobotics.com/files/V-REP_PRO_EDU_V3_4_0_Linux.tar.gz"
+VREPGZ="${VREPDIST}.tar.gz"
+VREPSRC="http://coppeliarobotics.com/files/${VREPDIST}.tar.gz"
 
 echo "Setting up V-Rep: "
 
@@ -26,7 +28,19 @@ if [ ! -f /opt/vrep.done ]; then
 	
 	echo "Unpacking V-Rep..."
 	tar -xzf /root/$VREPGZ -C /opt  && rm /root/$VREPGZ
-	#Unpacks to: /opt/openrefine-2.7
+	#Unpacks to: /opt/$VREPDIST
+	
+	#Add shortcut to run V-REP to desktop
+	cp -r $THISDIR/home/vagrant/Desktop/. /home/vagrant/Desktop/
+	chmod +x /home/vagrant/Desktop/*.desktop 
+	
+	#Autorun V-REP
+	#https://askubuntu.com/a/598202
+	mkdir -p /home/vagrant/.config/autostart
+	chmod ugo+w /home/vagrant/.config
+	cp -r $THISDIR/home/vagrant/.config/autostart/. /home/vagrant/.config/autostart/
+    chmod +x /home/vagrant/.config/autostart/*.desktop 
+    
 	touch /opt/vrep.done
 	echo "...unpacked V-Rep"
 else
@@ -34,14 +48,5 @@ else
 fi
 
 
-#Service definition to run application
-#cp $THISDIR/services/vrep.service /lib/systemd/system/vrep.service
-	
-# Enable autostart
-#systemctl enable vrep.service
-
-# Refresh service config
-#systemctl daemon-reload
-
-#(Re)start service
-#systemctl restart vrep.service
+#echo "VREP=${VREPPATH}" >> /etc/profile
+#echo "VREP_LIBRARY=${VREPPATH}/programming/remoteApiBindings/lib/lib/64Bit/" >> /etc/profile
