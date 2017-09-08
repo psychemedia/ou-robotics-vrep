@@ -1,0 +1,66 @@
+#Vagrantfile for building machine from build scripts
+
+#Set the environment variable from the command line used to call vagrant for:
+# - password for authenticated services (default is: tm351)
+#export TMP_PASS="123"
+
+##For web host provisioning:
+### --provider=digital ocean: export DIGITAL_OCEAN_TOKEN="YOUR TOKEN HERE"
+##--provider=linode: export LINODE_API_KEY="YOUR KEY HERE"
+
+Vagrant.configure("2") do |config|
+	
+
+	#grub problem appears to be getting worse and spreading...
+    config.vm.provision :shell, :inline => <<-SH
+    	apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y -o DPkg::options::="--force-confdef" -o DPkg::options::="--force-confold" install grub-pc
+	SH
+
+#------------------------- PROVIDER: VIRTUALBOX (BUILD) ------------------------------
+
+config.vm.provider :virtualbox do |virtualbox|
+  
+	#ubuntu/xenial bug? https://bugs.launchpad.net/cloud-images/+bug/1569237
+	config.vm.box = "bento/ubuntu-16.04"
+	#Stick with the default key
+	config.ssh.insert_key=false
+	
+	#For local testing:
+	#config.vm.box = "tm129robot"
+	#config.vm.box_url = "../boxes/test.box"
+	
+	config.vm.hostname = "tm129robot"
+
+	virtualbox.name = "tm129robot"
+	
+	#We need the memory to install scipy and build indexes on seeded mongodb
+	#After the build it can be reduced back down to 1024
+	virtualbox.memory = 1024
+	#virtualbox.cpus = 1 
+	virtualbox.gui = true
+
+	#---- START PORT FORWARDING ----
+	#Just in case we want to expose the simulator port(s)?
+	#Jupyter notebook
+	config.vm.network :forwarded_port, guest: 8888, host: 12980, auto_correct: true
+	#config.vm.network :forwarded_port, guest: 19997, host: 12981, auto_correct: true
+
+
+	#---- END PORT FORWARDING ----
+		
+end
+    
+#------------------------- END PROVIDER: VIRTUALBOX (BUILD) ------------------------------
+
+
+
+#------------------------------
+
+  config.vm.provision :shell, :inline => <<-SH
+  	#Add build scripts here
+  	cd /vagrant/build
+  	source ./monolithic_build.sh
+  SH
+  
+  
+end
