@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Apply Gnome Settings
+Exec=/opt/set-gnome-settings.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Type=Application
