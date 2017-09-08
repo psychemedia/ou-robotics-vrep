@@ -29,4 +29,4 @@ $THISDIR/vrep/build_vrep_pystack.sh
 #tidy up
 apt-get autoremove -y && apt-get clean && updatedb
 
-echo "...TM351 monolithic VM build sequence done."
+echo "...TM129 monolithic VM build sequence done."
