@@ -10,6 +10,7 @@ In order to simplify the installation of software for running the activities, bu
 The virtual machine will:
 
 - launch with a GUI desktop using Virtualbox;
+- disable VM desktop screensaver;
 - autorun the V-REP simulator on the virtual desktop;
 - autorun the Jupyter notebook server.
 
@@ -17,16 +18,15 @@ When launched under `vagrant` using the supplied `Vagrantfile`:
 
 - a shared directory will made available between the host machine and virtual machine that allows notebooks to be shared from the host into the VM;
 - enable copy and paste between the host machine and the virtual machine; *(for a Mac, cmd-c/v on host, ctrl-shift-c/v in guest);*
-- enable port forwarding so that the notebooks served by the Jupyter server can be viewed using a browser on the host machine (`http://localhost:12980`);
-- disable VM desktop screensaver.
+- enable port forwarding so that the notebooks served by the Jupyter server can be viewed using a browser on the host machine (`http://localhost:12980`).
  
 
 ## Installation
 
 To install and run the VM:
 
-- download and install Virtualbox;
-- download and install Vagrant;
+- download and install Virtualbox ([here](https://www.virtualbox.org/wiki/Downloads));
+- download and install Vagrant ([here](https://www.vagrantup.com/downloads.html));
 - *optionally*, install Vagrant plugin to ensure that VirtualBox Additions match between guest and host machines: `vagrant plugin install vagrant-vbguest`
 - download and unzip the contents of this repo and `cd` into the `robotVM/` folder.
 
