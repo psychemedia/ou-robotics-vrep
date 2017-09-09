@@ -28,13 +28,14 @@ To install and run the VM:
 - download and install Virtualbox;
 - download and install Vagrant;
 - *optionally*, install Vagrant plugin to ensure that VirtualBox Additions match between guest and host machines: `vagrant plugin install vagrant-vbguest`
+- download and unzip the contents of this repo and `cd` into the `robotVM/` folder.
 
 ### Build the VM
 `cp Vagrantfile.build Vagrantfile && vagrant up && vagrant halt`
 
 ### Run the VM Desktop With VirtualBox GUI
 
-__First run:__ `cp Vagranfile.user Vagrantfile && vagrant up`
+__First run:__ `cp Vagrantfile.user Vagrantfile && vagrant up`
 
 __Thereafter:__ `vagrant up`
 
