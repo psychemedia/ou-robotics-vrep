@@ -13,7 +13,7 @@ The virtual machine will:
 - autorun the V-REP simulator on the virtual desktop;
 - autorun the Jupyter notebook server.
 
-When launched under under `vagrant` using the supplied `Vagrantfile`:
+When launched under `vagrant` using the supplied `Vagrantfile`:
 
 - a shared directory will made available between the host machine and virtual machine that allows notebooks to be shared from the host into the VM;
 - enable copy and paste between the host machine and the virtual machine; *(for a Mac, cmd-c/v on host, ctrl-shift-c/v in guest);*
@@ -44,3 +44,12 @@ Suspend / resume VM: `vagrant suspend` / `vagrant resume`
 Halt / restart VM: `vagrant halt` / `vagrant up`
 
 Reboot running VM: `vagrant reload`
+
+## Demo
+
+The following demo is based on the demo provided in the  `vrep-api-python` repo:
+
+- launch the VM;
+- in the V-REP simulator running on the VM desktop, load in the `Pioneer.ttt` scene from the `/vagrant/scenes/` directory;
+- in your browser on host, got to `http://127.0.0.1:12980` and load the `Demo.ipynb` notebook;
+- work though the notebook and watch the simulator...
