@@ -2,8 +2,8 @@
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 
-#Install base python packages
-#apt-get update && apt-get install -y ubuntu-desktop && apt-get clean
+#Install packages for minimal desktop
+#Install terminal and support for dektop search
 apt-get update && apt-get install -y --no-install-recommends ubuntu-desktop && apt-get install -y gnome-terminal unity-lens-applications unity-lens-files && apt-get clean
 
 
