@@ -19,7 +19,10 @@ When launched under `vagrant` using the supplied `Vagrantfile`:
 - a shared directory will made available between the host machine and virtual machine that allows notebooks to be shared from the host into the VM;
 - enable copy and paste between the host machine and the virtual machine; *(for a Mac, cmd-c/v on host, ctrl-shift-c/v in guest);*
 - enable port forwarding so that the notebooks served by the Jupyter server can be viewed using a browser on the host machine (`http://localhost:12980`).
- 
+
+### Related blog posts:
+
+- [Distributing Virtual Machines That Include a Virtual Desktop To Students – V-REP + Jupyter Notebooks](https://blog.ouseful.info/2017/09/10/distributing-virtual-machines-that-include-a-virtual-desktop-to-students-v-rep-jupyter-notebooks/)
 
 ## Installation
 
@@ -27,13 +30,20 @@ To install and run the VM:
 
 - download and install Virtualbox ([here](https://www.virtualbox.org/wiki/Downloads));
 - download and install Vagrant ([here](https://www.vagrantup.com/downloads.html));
-- *optionally*, install Vagrant plugin to ensure that VirtualBox Additions match between guest and host machines: `vagrant plugin install vagrant-vbguest`
+- *optionally*, install Vagrant plugin to try to match the version of VirtualBox Guest Additions between guest and host machines: `vagrant plugin install vagrant-vbguest`
 - download and unzip the contents of this repo and `cd` into the `robotVM/` folder.
 
-### Build the VM
+### Build the VM (Optional)
+
+To build the VM from scratch:
+
 `cp Vagrantfile.build Vagrantfile && vagrant up && vagrant halt`
 
 ### Run the VM Desktop With VirtualBox GUI
+
+If you have built the VM locally (optional), you will be able to launch the VM using that image.
+
+If the locally built image is not find, the user `Vagrantfile` will automatically pull the latest prebuilt [ouseful/ou-robotics-test](https://app.vagrantup.com/ouseful/boxes/ou-robotics-test) box image from Vagrant Cloud and use that to launch the VM:
 
 __First run:__ `cp Vagrantfile.user Vagrantfile && vagrant up`
 
