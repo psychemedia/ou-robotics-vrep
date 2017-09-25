@@ -1,5 +1,7 @@
 # ou-robotics-vrep
-Repository for V-Rep robot simulator activities
+Repository for V-Rep robot simulator activities.
+
+Tutorial posts will appear on: https://roboticsandthemeaningoflife.wordpress.com/
 
 
 __See also:__
