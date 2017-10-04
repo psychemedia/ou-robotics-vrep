@@ -20,9 +20,11 @@ When launched under `vagrant` using the supplied `Vagrantfile`:
 - enable copy and paste between the host machine and the virtual machine; *(for a Mac, cmd-c/v on host, ctrl-shift-c/v in guest);*
 - enable port forwarding so that the notebooks served by the Jupyter server can be viewed using a browser on the host machine (`http://localhost:12980`).
 
-### Related blog posts:
+### Related blog posts (documenting the process...):
 
 - [Distributing Virtual Machines That Include a Virtual Desktop To Students – V-REP + Jupyter Notebooks](https://blog.ouseful.info/2017/09/10/distributing-virtual-machines-that-include-a-virtual-desktop-to-students-v-rep-jupyter-notebooks/)
+- [IPython Magic for Controlling the V-REP Robot Simulator from Jupyter notebooks](https://blog.ouseful.info/2017/10/03/ipython-magic-for-v-rep-robot-simulator/)
+- [First Attempt At Using IPywidgets in Jupyter Notebooks to Display V-REP Robot Simulator Telemetry](https://blog.ouseful.info/2017/10/03/first-attempt-at-using-ipywidgets-in-jupyter-notebooks-to-display-v-rep-robot-simulator-telemetry/)
 
 ## Installation
 
