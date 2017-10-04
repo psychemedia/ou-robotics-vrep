@@ -1,5 +1,21 @@
 # ou-robotics-vrep - robot VM
 
+The robotics activities described in this repo use Python scripts running in Jupyter notebooks to control simulatd robots in the Coppelia Robotics V-REP simulator.
+
+The software set-up can be installed two ways:
+
+- DIY on your own computer;
+- using a pre-built virtual machine, with notebooks accessed via a web browser on your host operating system.
+
+## DIY Installation Route
+
+- download and install a Jupyter notebook installation (e.g. download and install the Anaconda scientific python distribution);
+- download and install the V-REP simulator;
+- in the notebook environment, install the `vrep-api-python` package from the Github repo [Troxid/vrep-api-python](https://github.com/Troxid/vrep-api-python)
+
+
+## Virtual Machine Route
+
 In order to simplify the installation of software for running the activities, build a virtual machine that contains:
 
 - a minimal Linux desktop
