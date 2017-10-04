@@ -6,4 +6,4 @@ Scene files (`.ttt`) for use in the V-REP simulator.
 
 Scene files downloaded from:
 
-- [Troxid/vrep-api-python](https://github.com/Troxid/vrep-api-python): `LineFollowerPioneer.ttt`, `Pioneer.ttt`, `testAllComponents.ttt`
+- [Troxid/vrep-api-python](https://github.com/Troxid/vrep-api-python): `LineFollowerPioneer.ttt`, `PioneerRoom.ttt` (originally, `Pioneer.ttt`) , `testAllComponents.ttt`
