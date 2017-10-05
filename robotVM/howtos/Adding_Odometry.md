@@ -4,7 +4,7 @@ The rotary joints modelled within the simulator return a value between +/- 180 d
 
 To keep track of the total angular distance travelled by the joint, or derived metrics such as a rotation count, we need to implement our own odometry measures.
 
-For example, in the `LineTracer` robot, we might add the following child script, creating a handle that can be used to track the total accumulated angle turned by the joint that drives the left wheel, along with a count of the number of accumulated rotations.
+For example, in the `LineTracer` robot, we might add the following child script as a non-threaded child script, creating a handle that can be used to track the total accumulated angle turned by the joint that drives the left wheel, along with a count of the number of accumulated rotations.
 
 ```
 if (sim_call_type==sim_childscriptcall_initialization) then
