@@ -7,6 +7,18 @@ The software set-up can be installed two ways:
 - DIY on your own computer;
 - using a pre-built virtual machine, with notebooks accessed via a web browser on your host operating system.
 
+The notebooks are being developed as part of a course. The suggested path through them is as follows:
+
+- `Getting Started With The Notebooks.ipynb`
+- `Getting Started With Notebooks and the V-REP Simulator.ipynb`
+- `Demo - Square 1.ipynb`
+- `Demo - Square 2.ipynb`
+- `Demo - linetracer.ipynb`
+
+The notebook `Demo - vrep magic.ipynb` is a scratch pad containing examples of how to do all sorts of things...
+
+The `howtos` directory contains helpfiles for doig various things with the V-REP simulator.
+
 ## DIY Installation Route
 
 - download and install a Jupyter notebook installation (e.g. download and install the Anaconda scientific python distribution);
