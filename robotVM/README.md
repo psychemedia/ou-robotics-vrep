@@ -11,9 +11,9 @@ The notebooks are being developed as part of a course. The suggested path throug
 
 - `Getting Started With The Notebooks.ipynb`
 - `Getting Started With Notebooks and the V-REP Simulator.ipynb`
+- `Demo - linetracer.ipynb`
 - `Demo - Square 1.ipynb`
 - `Demo - Square 2.ipynb`
-- `Demo - linetracer.ipynb`
 
 The notebook `Demo - vrep magic.ipynb` is a scratch pad containing examples of how to do all sorts of things...
 
@@ -90,6 +90,6 @@ Reboot running VM: `vagrant reload`
 The following demo is based on the demo provided in the  `vrep-api-python` repo:
 
 - launch the VM;
-- in the V-REP simulator running on the VM desktop, load in the `Pioneer.ttt` scene from the `/vagrant/scenes/` directory;
-- in your browser on host, got to `http://127.0.0.1:12980` and load the `Demo.ipynb` notebook;
+- ensire that the V-REP simulator is running on the VM desktop;
+- in your browser on host, got to `http://127.0.0.1:12980` and load the `Demo - vrep magic.ipynb` notebook;
 - work though the notebook and watch the simulator...
