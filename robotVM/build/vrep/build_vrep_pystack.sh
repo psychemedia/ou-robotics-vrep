@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "======= STARTING VREP PY INSTALL ========"
+
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 
@@ -16,6 +18,13 @@ for PYTHONVER in 3 ; do
   
   #$PIP install git+https://github.com/Troxid/vrep-api-python.git
   $PIP install $THISDIR/root/vrep-api-python-master.zip
+  
+  #data collection
+  $PIP install pandas
+  
+  #Image processing and display
+  $PIP install matplotlib
+  $PIP install Pillow
 
 done
 
@@ -23,3 +32,4 @@ done
 apt-get autoremove -y
 apt-get clean -y
 
+echo "======= DONE VREP PY INSTALL ========"

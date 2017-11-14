@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "======= STARTING JUPYTER INSTALL ========"
+
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 for PYTHONVER in 3 ; do
@@ -26,10 +28,13 @@ for PYTHONVER in 3 ; do
   
   $PIP install jupyter-console
   $PIP install jupyter
+  $PIP install ipywidgets
   
   $PIP install nbdime
   
 done
+
+jupyter nbextension enable --py widgetsnbextension
 
 mkdir -p /vagrant/notebooks
 
@@ -60,3 +65,5 @@ if [[ -z "${DOCKERBUILD}" ]]; then
 	#(Re)start service
 	systemctl restart jupyter.service
 fi
+
+echo "======= DONE JUPYTER INSTALL ========"

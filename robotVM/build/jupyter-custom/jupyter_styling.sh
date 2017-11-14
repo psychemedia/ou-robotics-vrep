@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+echo "======= STARTING JUPYTER STYLING INSTALL ========"
+
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 JUPYTERSRC=${THISDIR}/jupyter_custom_files
@@ -58,3 +60,5 @@ cp -r $TM351TPLTEMPLATESFILEPATH/* $TPLTEMPLATES/
 if [[ -z "${DOCKERBUILD}" ]]; then
 	systemctl restart jupyter.service
 fi
+
+echo "======= DONE JUPYTER STYLING INSTALL ========"

@@ -1,6 +1,8 @@
 #!/bin/bash
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo "======= STARTING VREP INSTALL / BUILD ========"
+
 #DEBUG TOOLS
 #systemctl list-units | grep vrep
 #journalctl -u vrep.service
@@ -47,6 +49,13 @@ else
 	echo "...already downloaded and unpacked V-Rep"
 fi
 
+#TO DO: Need to specify a user and cd to their home dir
+#At the moment, this assumes everything is root?!
+cd
+source .profile && [ -z "$VREP_VM" ] && echo "export VREP_VM=1" >> .profile
 
-#echo "VREP=${VREPPATH}" >> /etc/profile
-#echo "VREP_LIBRARY=${VREPPATH}/programming/remoteApiBindings/lib/lib/64Bit/" >> /etc/profile
+echo "export VREP=${VREPPATH}" >> .profile
+echo "export VREP_LIBRARY=${VREPPATH}/programming/remoteApiBindings/lib/lib/64Bit/" >> .profile
+
+cd $THISDIR
+echo "======= DONE VREP INSTALL / BUILD ========"

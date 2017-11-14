@@ -1,8 +1,11 @@
 #!/bin/bash -e
 
+echo "======= STARTING JUPYTER EXTENSIONS INSTALL ========"
+
 apt-get install -y pandoc && apt-get clean
 
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 
 echo "Installing bundler extensions..."
 
@@ -29,3 +32,5 @@ echo "...done bundler extensions"
 
 #restart the service
 sudo systemctl restart jupyter.service
+
+echo "======= DONE JUPYTER EXTENSIONS INSTALL ========"

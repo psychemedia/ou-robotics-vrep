@@ -1,3 +1,5 @@
+echo "======= STARTING JUPYTER NBEXTENSIONS INSTALL ========"
+
 #Go for the easy option and src all the jupyter_contrib_nbextensions 
 pip3 install jupyter_contrib_nbextensions
 /usr/local/bin/jupyter contrib nbextension install --system
@@ -18,3 +20,5 @@ if [[ -z "${DOCKERBUILD}" ]]; then
 	#restart the service
 	systemctl restart jupyter.service
 fi
+
+echo "======= DONE JUPYTER NBEXTENSIONS INSTALL ========"

@@ -22,6 +22,9 @@ $THISDIR/jupyter-custom/jupyter_styling.sh
 #Local extensions
 $THISDIR/jupyter-custom/jupyter_extensions.sh
 
+#OpenCV
+$THISDIR/opencv/build_opencv.sh
+
 #V-REP
 $THISDIR/vrep/build_vrep.sh
 $THISDIR/vrep/build_vrep_pystack.sh
