@@ -13,5 +13,5 @@ Open the graph dialogue, change the buffer size, close then reopen the graph win
 ## Copying Data
 Right click on graph legend raises a popip that lets you copy data to clipboard.
 
-##Saving Data
+## Saving Data
 Select a graph and the from menu bar `File -> Export selected graphs as CSV...`

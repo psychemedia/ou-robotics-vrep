@@ -93,3 +93,11 @@ The following demo is based on the demo provided in the  `vrep-api-python` repo:
 - ensire that the V-REP simulator is running on the VM desktop;
 - in your browser on host, got to `http://127.0.0.1:12980` and load the `Demo - vrep magic.ipynb` notebook;
 - work though the notebook and watch the simulator...
+
+## Other V-REP edu Demos
+
+- [clement-moulin-frier/pyvrep_epuck](https://github.com/clement-moulin-frier/pyvrep_epuck): example tutorial notebooks; uses extension to `vrep` py package; scenes and notebooks included;
+- [Obero/vrep_2w1a_python_sample](https://github.com/Obero/vrep_2w1a_python_sample): demo for "two wheels, one arm" robot(?) (`.ttt` file included);
+- [Quadruped Robot 5: Simulation on V-REP](http://galvanicloop.com/blog/post/7/quadruped-robot-5-simulation-on-v-rep)
+- *poppy projext*: useful resources using a humanoid robot and simple robot arm. Example notebooks [here](https://github.com/poppy-project/community-notebooks);
+- vrep and openCV: [nemilya/vrep-api-python-opencv](https://github.com/nemilya/vrep-api-python-opencv)
