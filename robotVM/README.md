@@ -101,3 +101,5 @@ The following demo is based on the demo provided in the  `vrep-api-python` repo:
 - [Quadruped Robot 5: Simulation on V-REP](http://galvanicloop.com/blog/post/7/quadruped-robot-5-simulation-on-v-rep)
 - *poppy projext*: useful resources using a humanoid robot and simple robot arm. Example notebooks [here](https://github.com/poppy-project/community-notebooks);
 - vrep and openCV: [nemilya/vrep-api-python-opencv](https://github.com/nemilya/vrep-api-python-opencv)
+
+PS Examples elsewhere. Eg [ROS Juoyter widgets](https://blog.jupyter.org/ros-jupyter-b7e82b5e1202)
