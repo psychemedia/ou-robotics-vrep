@@ -45,6 +45,13 @@ if [ ! -f /opt/vrep.done ]; then
     
 	touch /opt/vrep.done
 	echo "...unpacked V-Rep"
+
+	echo "Installing V-REP headless / RDP / GUI support..."
+	apt-get update && apt-get install -y xrdp \
+			&& apt-get install -y xvfb \
+			&& apt-get install -y libavcodec-dev libavformat-dev libswscale-dev \
+			&& apt-get clean
+	echo "... V-REP RDP / GUI support DONE"
 else
 	echo "...already downloaded and unpacked V-Rep"
 fi
