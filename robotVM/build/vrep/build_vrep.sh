@@ -7,11 +7,11 @@ echo "======= STARTING VREP INSTALL / BUILD ========"
 #systemctl list-units | grep vrep
 #journalctl -u vrep.service
 
-VREPDIST="V-REP_PRO_EDU_V3_4_0_Linux"
+VREPDIST="V-REP_PRO_EDU_V3_6_2_Ubuntu18_04"
 VREPPATH="/opt/$VREPDIST"
 
-VREPGZ="${VREPDIST}.tar.gz"
-VREPSRC="http://coppeliarobotics.com/files/${VREPDIST}.tar.gz"
+VREPXZ="${VREPDIST}.tar.xz"
+VREPSRC="http://coppeliarobotics.com/files/${VREPDIST}.tar.xz"
 
 echo "Setting up V-Rep: "
 
@@ -29,7 +29,7 @@ if [ ! -f /opt/vrep.done ]; then
 	echo "...downloaded V-Rep"
 	
 	echo "Unpacking V-Rep..."
-	tar -xzf /root/$VREPGZ -C /opt  && rm /root/$VREPGZ
+	tar -xf /root/$VREPXZ -C /opt  && rm /root/$VREPXZ
 	#Unpacks to: /opt/$VREPDIST
 	
 	#Add shortcut to run V-REP to desktop
