@@ -13,7 +13,7 @@ After=network.target
 Type=simple
 PIDFile=/run/jupyter.pid
 
-ExecStartPre=mkdir -p /vagrant/notebooks
+ExecStartPre=/bin/mkdir -p /vagrant/notebooks
 
 ExecStart=/usr/local/bin/jupyter notebook --password='sha1:f90e58f8a3ac:b22934d28907aa4f67725341204c7fcbd08c2c88' --port=8888 --ip=127.0.0.1 --y --log-level=WARN --no-browser --notebook-dir=/vagrant/notebooks
 
