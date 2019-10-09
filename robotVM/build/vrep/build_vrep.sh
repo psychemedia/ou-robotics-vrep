@@ -51,6 +51,12 @@ if [ ! -f /opt/vrep.done ]; then
 			&& apt-get install -y xvfb \
 			&& apt-get install -y libavcodec-dev libavformat-dev libswscale-dev \
 			&& apt-get clean
+	
+	#Hack for now
+	USER=robot
+	PASS=l3tme1n
+	
+	useradd -p $(openssl passwd -1 $PASS) $USER
 	echo "... V-REP RDP / GUI support DONE"
 else
 	echo "...already downloaded and unpacked V-Rep"
