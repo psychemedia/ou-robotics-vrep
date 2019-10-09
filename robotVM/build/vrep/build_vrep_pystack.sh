@@ -16,9 +16,8 @@ for PYTHONVER in 3 ; do
   
   # The TM129 V-Rep python stack
   
-  #$PIP install git+https://github.com/Troxid/vrep-api-python.git
-  $PIP install $THISDIR/root/vrep-api-python-master.zip
-  
+  #$PIP install $THISDIR/root/vrep-api-python-master.zip
+  $PIP install git+https://github.com/Troxid/vrep-api-python.git
   #data collection
   $PIP install pandas
   
