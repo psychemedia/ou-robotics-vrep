@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=V-REP Simulator
-Exec=/opt/V-REP_PRO_EDU_V3_4_0_Linux/vrep.sh
+Exec=/opt/V-REP_PRO_EDU_V3_6_2_Ubuntu18_04/vrep.sh
 Type=Application
 X-GNOME-Autostart-enabled=true
