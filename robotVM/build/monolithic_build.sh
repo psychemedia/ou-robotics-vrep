@@ -10,6 +10,9 @@ $THISDIR/version.sh
 
 #Build script for building machine
 $THISDIR/base/basepackages.sh
+$THISDIR/base/baseRDP.sh
+$THISDIR/base/baseheadless.sh
+$THISDIR/base/baseuser.sh
 $THISDIR/base/basedesktop.sh
 $THISDIR/base/basepy.sh
 
