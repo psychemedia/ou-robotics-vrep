@@ -1,4 +1,7 @@
 #via https://gist.github.com/whophil/5a2eab328d2f8c16bb31c9ceaf23164f
+
+#On updating this file, run: systemctl daemon-reload
+
 [Unit]
 Description=OU TM351 Jupyter Notebook
 
@@ -13,7 +16,7 @@ After=network.target
 Type=simple
 PIDFile=/run/jupyter.pid
 
-ExecStartPre=mkdir -p /vagrant/notebooks
+ExecStartPre=/bin/mkdir -p /vagrant/notebooks
 
 ExecStart=/usr/local/bin/jupyter notebook --port=8888 --ip=0.0.0.0 --y --log-level=WARN --no-browser --notebook-dir=/vagrant/notebooks --allow-root
 
