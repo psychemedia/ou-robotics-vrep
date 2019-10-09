@@ -18,13 +18,17 @@ for PYTHONVER in 3 ; do
   
   #$PIP install $THISDIR/root/vrep-api-python-master.zip
   $PIP install git+https://github.com/Troxid/vrep-api-python.git
-  $PIP install git+https://github.com/stepjam/PyRep.git
+  
 
   #PyRep
   # Should be doing this as a .bashrc for RDP user access?
+  source .profile
   echo "export VREP_ROOT=${VREPPATH}" >> .profile
   echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$VREP_ROOT" >> .profile
   echo "export QT_QPA_PLATFORM_PLUGIN_PATH=$VREP_ROOT" >> .profile
+  source .profile
+  
+  $PIP install numpy cffi git+https://github.com/stepjam/PyRep.git
 
   #data collection
   $PIP install pandas
