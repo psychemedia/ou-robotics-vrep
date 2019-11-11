@@ -42,6 +42,10 @@ The virtual machine will:
 - autorun the V-REP simulator on the virtual desktop;
 - autorun the Jupyter notebook server.
 
+The build files are currently building a version of the VM that seems to be broken. Fortunately, there is a working box in an earlier version (`0.0.1`) on Vagrantcloud.
+
+Working version: `cp Vagrantfile.works Vagrantfile`
+
 When launched under `vagrant` using the supplied `Vagrantfile`:
 
 - a shared directory will made available between the host machine and virtual machine that allows notebooks to be shared from the host into the VM;
